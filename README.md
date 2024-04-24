@@ -1,2 +1,2 @@
-# jhyoo-log
+# dev-log
 github for develper
