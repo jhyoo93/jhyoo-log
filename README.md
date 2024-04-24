@@ -1,2 +1,2 @@
-# my_github
+# jhyoo-log
 github for develper
