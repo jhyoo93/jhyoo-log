@@ -57,3 +57,33 @@
     const multiply4 = x => x * 2;
     
     console.log(multiply4(3));
+
+    // 여러 파라미터 함수 축소
+    const multiply5 = x => y => z => `x: ${x} y: ${y} z: ${z}`;
+    console.log(multiply5(2)(5)(7));
+
+    function multiply6(x) {
+        return function(y){
+            return function(z) {
+                return `x: ${x} y: ${y} z: ${z}`;
+            }
+        }
+    } 
+
+    console.log(multiply5(2)(5)(7));
+
+    // 무한하게 파라미터를 받을수있음.
+    const multiplyAll = function(...argument) {
+        return Object.values(argument).reduce((a, b) => a * b, 1);
+    }
+    
+    console.log(multiplyAll(3, 4 ,5, 6, 7, 8, 9, 10));
+
+    // immediately invoked function
+    (function(x, y){
+        console.log(x * y);
+    })(4, 5)
+
+    // 함수 Object 형태인지 확인
+    console.log(multiply instanceof Object);
+
